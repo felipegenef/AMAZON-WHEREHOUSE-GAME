@@ -18,9 +18,11 @@
         <a-asset-item id="bkt-m" src="assets/basket.mtl"></a-asset-item>
         <a-asset-item id="mng-o" src="assets/manager-obj/manager.obj"></a-asset-item>
         <a-asset-item id="mng-m" src="assets/manager-obj/manager.mtl"></a-asset-item>
+        <a-asset-item id="shlf-o" src="assets/book-shelf.obj"></a-asset-item>
+        <a-asset-item id="shlf-m" src="assets/book-shelf.mtl"></a-asset-item>
       </a-assets>
         
-      <a-entity environment="preset:forest;"></a-entity>
+      <!-- <a-entity environment="preset:forest;"></a-entity> -->
       <a-plane
         id="floor"
         static-body
@@ -48,6 +50,13 @@
       scale="0.030 0.030 0.030"
       id="basket"
     ></a-entity>
+    <a-entity
+    obj-model="obj: #shlf-o; mtl: #shlf-m"
+ position="7.461 1.942 11.886"
+    rotation="0 0 0"
+    scale="0.030 0.030 0.030"
+    id="shelf"
+  ></a-entity>
    
     <a-entity
     obj-model="obj: #mng-o; mtl: #mng-m"
