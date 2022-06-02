@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <link rel="icon" href="images/icon.jpg" /> -->
+    <link rel="preload" href="images/grass.jpg" />
+    <link rel="preload" href="images/sky.jpeg" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -9,8 +10,8 @@
   <body>
     <a-scene id="myScene">
       <a-assets>
-        <!-- <img id="icon" src="images/icon.jpg" /> -->
-
+        <img id="floor-gss" src="images/grass.jpg" />
+        <img id="sky-asset" src="images/sky.jpeg" />
         <!-- 1 -->
         <a-asset-item id="mkt-o" src="assets/market.obj"></a-asset-item>
         <a-asset-item id="mkt-m" src="assets/market.mtl"></a-asset-item>
@@ -28,10 +29,14 @@
         static-body
         height="1000"
         width="1000"
-        position="0 -0.02 0"
-        color="black"
+        position="0 0 0"
         rotation="-90 0 0"
+        material="src:#floor-gss"
       ></a-plane>
+      <a-sky
+      id="sky"
+      material="src:#sky-asset"
+    ></a-sky>
       <a-camera id="myCamera" position="-1.021 3.997 12.732" rotation="-8.823 -5.843 0.000">
         <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
       </a-camera>
