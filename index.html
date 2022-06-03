@@ -5,6 +5,7 @@
     <link rel="preload" href="images/sky.jpeg" />
     <!-- truck -->
     <link rel="preload" href="assets/truck.gltf" />
+    <link rel="preload" href="assets/wherehouse.gltf" />
     <!-- wherehouse -->
     <!-- <link rel="preload" href="assets/wherehouse/1041_normal.png" />
     <link rel="preload" href="assets/wherehouse/1042_normal.png" />
@@ -63,15 +64,11 @@
         <img id="floor-gss" src="images/grass.jpg" />
         <img id="sky-asset" src="images/sky.jpeg" />
         <!-- 1 -->
-        <!-- <a-asset-item id="wrh-o" src="assets/wherehouse/obj.obj"></a-asset-item>
-        <a-asset-item id="wrh-m" src="assets/wherehouse/obj.mtl"></a-asset-item> -->
-        <!-- <a-asset-item id="bkt-o" src="assets/basket.obj"></a-asset-item>
-        <a-asset-item id="bkt-m" src="assets/basket.mtl"></a-asset-item> -->
+
         <a-asset-item id="mng-o" src="assets/manager-obj/manager.obj"></a-asset-item>
         <a-asset-item id="mng-m" src="assets/manager-obj/manager.mtl"></a-asset-item>
-        <a-asset-item id="truck-" src="assets/truck.gltf"></a-asset-item>
-        <!-- <a-asset-item id="shlf-o" src="assets/book-shelf.obj"></a-asset-item>
-        <a-asset-item id="shlf-m" src="assets/book-shelf.mtl"></a-asset-item> -->
+        <a-asset-item id="truck-m" src="assets/truck.gltf"></a-asset-item>
+        <a-asset-item id="wrh-m" src="assets/wherehouse.gltf"></a-asset-item>
       </a-assets>
         
       <!-- <a-entity environment="preset:forest;"></a-entity> -->
@@ -104,9 +101,17 @@
       gltf-model="#truck-m"
    position="0.690 0.417 0.541"
       rotation="0 0 0"
-      scale="0.03 0.03 0.03"
+      scale="0.15 0.15 0.15"
       id="truck"
     ></a-entity>
+    
+    <a-entity
+    gltf-model="#wrh-m"
+ position="0.690 0.417 0.541"
+    rotation="0 0 0"
+    scale="0.15 0.15 0.15"
+    id="wherehouse"
+  ></a-entity>
     <a-entity
     obj-model="obj: #mng-o; mtl: #mng-m"
     position="-0.933 0.653 10.611"
