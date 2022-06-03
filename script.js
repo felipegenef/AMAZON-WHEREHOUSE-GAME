@@ -32,11 +32,17 @@ const shootCollided = (event) => {
     // event.detail.target.el.removeEventListener("collide", shootCollided);
     console.log(event.detail.target.el);
     console.log(event.detail.body.el);
+    const box = document.createElement("a-entity");
+    box.setAttribute("position", "3.201 4.763 -50.692");
+    box.setAttribute("material", "src:#box2");
+    box.setAttribute("geometry", "depth:3;height:3;width:3");
+    box.setAttribute("static-body", "sphereRadius:NaN");
+    box.setAttribute("velocity", "0 0 4");
     // myScene.removeChild(event.detail.target.el);
     // myScene.removeChild(event.detail.body.el);
-    console.log(rightAnswers.includes(event.detail.target.el.id));
+    // console.log(rightAnswers.includes(event.detail.target.el.id));
 
-    truck.play();
+    truckOut.play();
   }
   //   if (document.querySelectorAll(".target").length === 0) {
   //     console.log("You win!");
