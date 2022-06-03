@@ -14,6 +14,7 @@
     <!-- truck -->
     <link rel="preload" href="assets/truck.gltf" />
     <link rel="preload" href="assets/wherehouse.gltf" />
+    <link rel="preload" href="assets/carrinho.gltf" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -36,6 +37,7 @@
 
         <a-asset-item id="truck-m" src="assets/truck.gltf"></a-asset-item>
         <a-asset-item id="wrh-m" src="assets/wherehouse.gltf"></a-asset-item>
+        <a-asset-item id="car-m" src="assets/carrinho.gltf"></a-asset-item>
       </a-assets>
 
       <!-- <a-entity environment="preset:forest;"></a-entity> -->
@@ -58,12 +60,19 @@
       </a-camera>
 
       <a-entity
-        gltf-model="#truck-m"
-        position="0.680 0.417 23.931"
+        gltf-model="#car-m"
+        position="1.454 6.054 -54.867"
         rotation="0 90.000 0"
         scale="0.150 0.150 0.150"
-        id="truck"
+        id="car"
       ></a-entity>
+      <a-entity
+      gltf-model="#truck-m"
+      position="0.680 0.417 23.931"
+      rotation="0 90.000 0"
+      scale="0.150 0.150 0.150"
+      id="truck"
+    ></a-entity>
       <a-entity
         gltf-model="assets/truck.gltf"
         position="13.34 0.417 23.931"
