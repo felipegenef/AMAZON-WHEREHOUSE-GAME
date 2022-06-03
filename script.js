@@ -38,6 +38,7 @@ const shootCollided = (event) => {
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
+      myScene.appendChild(box);
     }
 
     // myScene.removeChild(event.detail.target.el);
