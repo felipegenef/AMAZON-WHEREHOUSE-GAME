@@ -12,7 +12,7 @@ illum 2
 map_Kd BackGround_Albedo.tga.png
 map_Ke BackGround_Emission.png
 
-newmtl Brushed_Aluminum.001
+newmtl Brushed_Aluminum.002
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.940000 0.940000 0.940000
@@ -21,7 +21,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Default_Material_2
+newmtl Default_Material_2.002
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.000911 0.000911 0.000911
@@ -30,7 +30,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Default_Material_4
+newmtl Default_Material_4.001
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.630757 0.630757 0.630757
@@ -39,7 +39,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Glowing
+newmtl Glowing.001
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.054480 0.577581 0.768151
@@ -66,7 +66,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Metal
+newmtl Metal.001
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.617207 0.617207 0.617207
@@ -75,7 +75,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Metal_2.002
+newmtl Metal_2
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.617207 0.617207 0.617207
@@ -84,7 +84,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl Metal_4.001
+newmtl Metal_4
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.617207 0.617207 0.617207
@@ -93,7 +93,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl UEEE_Hangar1.001
+newmtl UEEE_Hangar1
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.768627 0.768627 0.768627
@@ -105,7 +105,7 @@ map_Kd UEEE_Hangar1_Albedo.png
 map_Ke UEEE_Hangar1_Emission.png
 map_d UEEE_Hangar1_Opasity.png
 
-newmtl UEEE_Hangar1_opasity_1.001
+newmtl UEEE_Hangar1_opasity_1
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.266667 0.266667 0.266667
@@ -123,7 +123,7 @@ Ni 1.000000
 d 0.000000
 illum 2
 
-newmtl UEEE_Hangar1_opasity_3.001
+newmtl UEEE_Hangar1_opasity_3
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.698039 0.698039 0.698039
@@ -132,7 +132,7 @@ Ni 1.000000
 d 0.250000
 illum 2
 
-newmtl UEEE_Hangar1_opasity_4
+newmtl UEEE_Hangar1_opasity_4.001
 Ns 96.078431
 Ka 0.258824 0.250980 0.219608
 Kd 0.698039 0.698039 0.698039
