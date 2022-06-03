@@ -6,54 +6,6 @@
     <!-- truck -->
     <link rel="preload" href="assets/truck.gltf" />
     <link rel="preload" href="assets/wherehouse.gltf" />
-    <!-- wherehouse -->
-    <!-- <link rel="preload" href="assets/wherehouse/1041_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1042_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1043_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1045_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1045_opacity.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1053_albedo.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1053_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1053_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1053_roughness.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1054_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1054_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1055_albedo.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1055_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1055_roughness.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1054_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1054_normal.png" />
-    <link rel="preload" href="assets/wherehouse/1055_albedo.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1055_emissive.jpeg" />
-    <link rel="preload" href="assets/wherehouse/1055_roughness.jpeg" />
-    <link rel="preload" href="assets/wherehouse/andipdxPROJECTS.png" />
-    <link rel="preload" href="assets/wherehouse/BackGround_Albedo.tga.png" />
-    <link rel="preload" href="assets/wherehouse/Brushed Aluminum_baseColor.png" />
-    <link rel="preload" href="assets/wherehouse/BackGround_Emission.png" />
-    <link rel="preload" href="assets/wherehouse/Brushed Aluminum_metallic.png" />
-    <link rel="preload" href="assets/wherehouse/Brushed Aluminum_roughness.png" />
-    <link rel="preload" href="assets/wherehouse/gabineteuv.jpeg" />
-    <link rel="preload" href="assets/wherehouse/img-0.png" />
-    <link rel="preload" href="assets/wherehouse/img-1.png" />
-    <link rel="preload" href="assets/wherehouse/internal_ground_ao_texture.jpeg" />
-    <link rel="preload" href="assets/wherehouse/MAT_Scifi_Door_5_Base_Color.png" />
-    <link rel="preload" href="assets/wherehouse/MAT_Scifi_Door_5_Emissive.png" />
-    <link rel="preload" href="assets/wherehouse/metaltable.jpeg" />
-    <link rel="preload" href="assets/wherehouse/obj.mtl" />
-    <link rel="preload" href="assets/wherehouse/obj.obj" />
-    <link rel="preload" href="assets/wherehouse/tecladouv.jpeg" />
-    <link rel="preload" href="assets/wherehouse/Tool_Cabinet_Base_Color.png" />
-    <link rel="preload" href="assets/wherehouse/Tools_Composite_Base_Color_1.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Albedo.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_AmbientOcclusion.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Emission.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Gloss.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_NormalMap.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Opasity.png" />
-    <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Specular.png" />
-    <link rel="preload" href="assets/wherehouse/uffizi-large_IRD_c00.renderer.exr" />
-    <link rel="preload" href="assets/wherehouse/uvmonitor.jpeg" />
-    <link rel="preload" href="assets/wherehouse/uvtable.jpeg" /> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -85,37 +37,29 @@
       id="sky"
       material="src:#sky-asset"
     ></a-sky>
-      <a-camera id="myCamera" position="-1.021 3.997 12.732" rotation="-8.823 -5.843 0.000">
+      <a-camera id="myCamera" position="0.488 4.464 -11.203" rotation="-5.844 897.941 0.000">
         <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
       </a-camera>
 
-      <!-- <a-entity
-        obj-model="obj: #wrh-o; mtl: #wrh-m"
-     position="0.690 0.417 0.541"
-        rotation="0 0 0"
-        scale="0.03 0.03 0.03"
-        id="wherehouse"
-      ></a-entity> -->
-
       <a-entity
       gltf-model="#truck-m"
-   position="0.690 0.417 0.541"
-      rotation="0 0 0"
-      scale="0.15 0.15 0.15"
+   position="0.680 0.417 23.931"
+      rotation="0 90.000 0"
+      scale="0.150 0.150 0.150"
       id="truck"
     ></a-entity>
     
     <a-entity
     gltf-model="#wrh-m"
- position="0.690 0.417 0.541"
+ position="0.690 0.417 -73.756"
     rotation="0 0 0"
-    scale="0.15 0.15 0.15"
+    scale="1 1 1"
     id="wherehouse"
   ></a-entity>
     <a-entity
     obj-model="obj: #mng-o; mtl: #mng-m"
-    position="-0.933 0.653 10.611"
-    rotation="0 0 0"
+    position="-0.933 0.653 -6.016"
+    rotation="0 180.000 0"
     scale="2 2 2"
     id="manager"
   ></a-entity>
