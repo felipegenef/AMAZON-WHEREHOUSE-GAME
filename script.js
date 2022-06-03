@@ -30,10 +30,12 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
-    console.log(event.detail.target.el.id);
+    console.log(event.detail.target.el);
+    console.log(event.detail.body.el);
     // myScene.removeChild(event.detail.target.el);
     // myScene.removeChild(event.detail.body.el);
     console.log(rightAnswers.includes(event.detail.target.el.id));
+
     truck.play();
   }
   //   if (document.querySelectorAll(".target").length === 0) {
