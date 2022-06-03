@@ -3,8 +3,10 @@
   <head>
     <link rel="preload" href="images/grass.jpg" />
     <link rel="preload" href="images/sky.jpeg" />
+    <!-- truck -->
+    <link rel="preload" href="assets/truck.gltf" />
     <!-- wherehouse -->
-    <link rel="preload" href="assets/wherehouse/1041_normal.png" />
+    <!-- <link rel="preload" href="assets/wherehouse/1041_normal.png" />
     <link rel="preload" href="assets/wherehouse/1042_normal.png" />
     <link rel="preload" href="assets/wherehouse/1043_normal.png" />
     <link rel="preload" href="assets/wherehouse/1045_emissive.jpeg" />
@@ -50,7 +52,7 @@
     <link rel="preload" href="assets/wherehouse/UEEE_Hangar1_Specular.png" />
     <link rel="preload" href="assets/wherehouse/uffizi-large_IRD_c00.renderer.exr" />
     <link rel="preload" href="assets/wherehouse/uvmonitor.jpeg" />
-    <link rel="preload" href="assets/wherehouse/uvtable.jpeg" />
+    <link rel="preload" href="assets/wherehouse/uvtable.jpeg" /> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -61,12 +63,13 @@
         <img id="floor-gss" src="images/grass.jpg" />
         <img id="sky-asset" src="images/sky.jpeg" />
         <!-- 1 -->
-        <a-asset-item id="wrh-o" src="assets/wherehouse/obj.obj"></a-asset-item>
-        <a-asset-item id="wrh-m" src="assets/wherehouse/obj.mtl"></a-asset-item>
+        <!-- <a-asset-item id="wrh-o" src="assets/wherehouse/obj.obj"></a-asset-item>
+        <a-asset-item id="wrh-m" src="assets/wherehouse/obj.mtl"></a-asset-item> -->
         <!-- <a-asset-item id="bkt-o" src="assets/basket.obj"></a-asset-item>
         <a-asset-item id="bkt-m" src="assets/basket.mtl"></a-asset-item> -->
         <a-asset-item id="mng-o" src="assets/manager-obj/manager.obj"></a-asset-item>
         <a-asset-item id="mng-m" src="assets/manager-obj/manager.mtl"></a-asset-item>
+        <a-asset-item id="truck-" src="assets/truck.gltf"></a-asset-item>
         <!-- <a-asset-item id="shlf-o" src="assets/book-shelf.obj"></a-asset-item>
         <a-asset-item id="shlf-m" src="assets/book-shelf.mtl"></a-asset-item> -->
       </a-assets>
@@ -89,15 +92,21 @@
         <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
       </a-camera>
 
-      <a-entity
+      <!-- <a-entity
         obj-model="obj: #wrh-o; mtl: #wrh-m"
      position="0.690 0.417 0.541"
         rotation="0 0 0"
         scale="0.03 0.03 0.03"
         id="wherehouse"
-      ></a-entity>
+      ></a-entity> -->
 
-   
+      <a-entity
+      gltf-model="#truck-m"
+   position="0.690 0.417 0.541"
+      rotation="0 0 0"
+      scale="0.03 0.03 0.03"
+      id="truck"
+    ></a-entity>
     <a-entity
     obj-model="obj: #mng-o; mtl: #mng-m"
     position="-0.933 0.653 10.611"
