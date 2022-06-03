@@ -1,5 +1,5 @@
 const truck = new Audio("assets/truck.wav");
-const truckOut = new Audio("assets/truckout.mp3");
+const truckOut = new Audio("assets/truckaudio.mp3");
 const error = new Audio("assets/error.wav");
 const rightAnswers = [
   "3-blue",
@@ -30,19 +30,19 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
-    console.log(event.detail.target.el);
-    console.log(event.detail.body.el);
-    const box = document.createElement("a-entity");
-    box.setAttribute("position", "3.201 4.763 -50.692");
-    box.setAttribute("material", "src:#box2");
-    box.setAttribute("geometry", "depth:3;height:3;width:3");
-    box.setAttribute("static-body", "sphereRadius:NaN");
-    box.setAttribute("velocity", "0 0 4");
+    if (rightAnswers.includes(event.detail.body.el.id)) {
+      truckOut.play();
+      const box = document.createElement("a-entity");
+      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("material", "src:#box2");
+      box.setAttribute("geometry", "depth:3;height:3;width:3");
+      box.setAttribute("static-body", "sphereRadius:NaN");
+      box.setAttribute("velocity", "0 0 4");
+    }
+
     // myScene.removeChild(event.detail.target.el);
     // myScene.removeChild(event.detail.body.el);
     // console.log(rightAnswers.includes(event.detail.target.el.id));
-
-    truckOut.play();
   }
   //   if (document.querySelectorAll(".target").length === 0) {
   //     console.log("You win!");
