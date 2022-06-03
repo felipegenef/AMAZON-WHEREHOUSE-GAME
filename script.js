@@ -1,7 +1,14 @@
 const truck = new Audio("assets/truck.wav");
 const truckOut = new Audio("assets/truckout.mp3");
 const error = new Audio("assets/error.wav");
-
+const rightAnswers = [
+  "3-blue",
+  "2-blue",
+  "2-orange",
+  "3-orange",
+  "3-black",
+  "1-black",
+];
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -22,12 +29,12 @@ const shootCollided = (event) => {
     myScene.removeChild(event.detail.target.el);
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
-    event.detail.target.el.removeEventListener("collide", shootCollided);
+    // event.detail.target.el.removeEventListener("collide", shootCollided);
     console.log(event.detail.target.el.id);
-    myScene.removeChild(event.detail.target.el);
-    myScene.removeChild(event.detail.body.el);
-
-    killAudio.play();
+    // myScene.removeChild(event.detail.target.el);
+    // myScene.removeChild(event.detail.body.el);
+    console.log(rightAnswers.includes(event.detail.target.el.id));
+    truck.play();
   }
   //   if (document.querySelectorAll(".target").length === 0) {
   //     console.log("You win!");
