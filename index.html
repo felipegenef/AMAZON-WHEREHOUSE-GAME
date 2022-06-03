@@ -8,6 +8,9 @@
     <link rel="preload" href="images/caixa3.jpg" />
     <link rel="preload" href="images/grass.jpg" />
     <link rel="preload" href="images/sky.jpeg" />
+    <link rel="preload" href="images/1.png" />
+    <link rel="preload" href="images/2.png" />
+    <link rel="preload" href="images/3.png" />
     <!-- truck -->
     <link rel="preload" href="assets/truck.gltf" />
     <link rel="preload" href="assets/wherehouse.gltf" />
@@ -24,14 +27,23 @@
         <img id="box1" src="images/caixa1.jpg" />
         <img id="box2" src="images/caixa2.jpg" />
         <img id="box3" src="images/caixa3.jpg" />
+        <img id="1" src="images/1.png" />
+        <img id="2" src="images/2.png" />
+        <img id="3" src="images/3.png" />
         <!-- 1 -->
 
-        <a-asset-item id="mng-o" src="assets/manager-obj/manager.obj"></a-asset-item>
-        <a-asset-item id="mng-m" src="assets/manager-obj/manager.mtl"></a-asset-item>
+        <a-asset-item
+          id="mng-o"
+          src="assets/manager-obj/manager.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="mng-m"
+          src="assets/manager-obj/manager.mtl"
+        ></a-asset-item>
         <a-asset-item id="truck-m" src="assets/truck.gltf"></a-asset-item>
         <a-asset-item id="wrh-m" src="assets/wherehouse.gltf"></a-asset-item>
       </a-assets>
-        
+
       <!-- <a-entity environment="preset:forest;"></a-entity> -->
       <a-plane
         id="floor"
@@ -42,22 +54,23 @@
         rotation="-90 0 0"
         material="src:#floor-gss"
       ></a-plane>
-      <a-sky
-      id="sky"
-      material="src:#sky-asset"
-    ></a-sky>
-      <a-camera id="myCamera" position="0.488 4.464 -11.203" rotation="-5.844 897.941 0.000">
+      <a-sky id="sky" material="src:#sky-asset"></a-sky>
+      <a-camera
+        id="myCamera"
+        position="0.488 4.464 -11.203"
+        rotation="-5.844 897.941 0.000"
+      >
         <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
       </a-camera>
 
       <a-entity
-      gltf-model="#truck-m"
-   position="0.680 0.417 23.931"
-      rotation="0 90.000 0"
-      scale="0.150 0.150 0.150"
-      id="truck"
-    ></a-entity>
-    <a-entity
+        gltf-model="#truck-m"
+        position="0.680 0.417 23.931"
+        rotation="0 90.000 0"
+        scale="0.150 0.150 0.150"
+        id="truck"
+      ></a-entity>
+      <a-entity
         gltf-model="assets/truck.gltf"
         position="13.34 0.417 23.931"
         rotation="0 90 0"
@@ -71,328 +84,367 @@
         scale="0.15 0.15 0.15"
         id="truck-3"
       ></a-entity>
-    
-    <a-entity
-    gltf-model="#wrh-m"
- position="0.690 0.417 -73.756"
-    rotation="0 0 0"
-    scale="1 1 1"
-    id="wherehouse"
-  ></a-entity>
-    <a-entity
-    obj-model="obj: #mng-o; mtl: #mng-m"
-    position="-0.933 0.653 -6.016"
-    rotation="0 180.000 0"
-    scale="2 2 2"
-    id="manager"
-  ></a-entity>
- 
-     
+
       <a-entity
-        position="0 3 0"
-        id="light"
-        light="color:#64b9dd;distance:10;intensity:0.8;type:hemisphere"
+        gltf-model="#wrh-m"
+        position="0.690 0.417 -73.756"
+        rotation="0 0 0"
+        scale="1 1 1"
+        id="wherehouse"
       ></a-entity>
-     
-     
+      <a-entity
+        obj-model="obj: #mng-o; mtl: #mng-m"
+        position="-0.933 0.653 -6.016"
+        rotation="0 180.000 0"
+        scale="2 2 2"
+        id="manager"
+      ></a-entity>
+
+      <a-entity
+        position="15.579 9.032 -1.479"
+        geometry="width:1.7;height:1.7;segmentsHeight:18"
+        material="src:#logo"
+        id="Logo"
+      ></a-entity
+      ><a-entity
+        position="2.769 9.032 -1.479"
+        geometry="height:1.7;width:1.7;segmentsHeight:18"
+        material="src:#logo"
+        id="Logo-2"
+      ></a-entity
+      ><a-entity
+        position="-9.954 9.032 -1.479"
+        geometry="height:1.7;width:1.7;segmentsHeight:18"
+        material="src:#logo"
+        id="Logo-3"
+      ></a-entity
+      ><a-entity
+        position="-4.524 3.957 -2.626"
+        material=""
+        geometry="width:5;height:3;depth:0.2"
+        id="board"
+      ></a-entity
+      ><a-entity
+        position="-4.524 1.036 -2.626"
+        material=""
+        geometry="width:0.5;height:3;depth:0.2"
+        id="board-4"
+      ></a-entity
+      ><a-entity
+        position="9.849 1.036 -2.626"
+        material=""
+        geometry="depth:0.2;height:3;width:0.5"
+        id="board-6"
+      ></a-entity
+      ><a-entity
+        position="-14.03 1.036 -2.626"
+        material=""
+        geometry="depth:0.2;height:3;width:0.5"
+        id="board-5"
+      ></a-entity
+      ><a-entity
+        position="9.722 3.984 -2.626"
+        material=""
+        geometry="depth:0.2;height:3;width:5"
+        id="board-2"
+      ></a-entity
+      ><a-entity
+        position="-14.005 3.984 -2.626"
+        material=""
+        geometry="depth:0.2;height:3;width:5"
+        id="board-3"
+      ></a-entity
+      ><a-entity
+        position="-12.097 2.203 -30.583"
+        id="BOX"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-9.853 2.203 -33.888"
+        id="BOX-2"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.643 5.042 -50.745"
+        id="BOX-12"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.643 2.6 -45.299"
+        id="BOX-13"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-15.156 2.6 -45.299"
+        id="BOX-14"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.49 5.24 -33.888"
+        id="BOX-3"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-13.117 2.203 -33.888"
+        id="BOX-4"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.495 5.015 -37.251"
+        id="BOX-5"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.377 8.051 -36.001"
+        id="BOX-8"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-16.121 2.178 -33.638"
+        id="BOX-9"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-14.868 2.178 -36.866"
+        id="BOX-10"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-14.798 5.276 -34.178"
+        id="BOX-11"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="15.78 2.229 -56.442"
+        id="BOX2"
+        material="src:[object HTMLImageElement]"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="12.437 2.229 -55.863"
+        id="BOX2-2"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="12.437 2.229 -51.04"
+        id="BOX2-3"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="16.003 2.229 -51.04"
+        id="BOX2-4"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="8.46 2.229 -53.615"
+        id="BOX2-5"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-7.174 2.229 -53.615"
+        id="BOX2-8"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-7.174 2.229 -57.679"
+        id="BOX2-9"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.331 2.229 -57.679"
+        id="BOX2-10"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="13.777 4.945 -53.615"
+        id="BOX2-6"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="13.777 2.262 -47.576"
+        id="BOX2-7"
+        material="src:#box2"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="16.93 2.262 -33.675"
+        id="BOX3"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="13.8 2.262 -33.675"
+        id="BOX3-2"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="10.632 2.262 -33.675"
+        id="BOX3-3"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="10.632 2.262 -37.115"
+        id="BOX3-4"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="10.632 5.244 -34.468"
+        id="BOX3-5"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="15.722 5.244 -34.468"
+        id="BOX3-6"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="13.888 2.069 -30.741"
+        id="BOX3-7"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-13.585 2.069 -50.169"
+        id="BOX3-8"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-13.585 2.069 -53.876"
+        id="BOX3-9"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-10.246 2.069 -53.876"
+        id="BOX3-10"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-10.246 2.069 -50.25"
+        id="BOX3-11"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-7.137 2.069 -50.25"
+        id="BOX3-12"
+        material="src:#box3"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-11.663 2.203 -36.737"
+        id="BOX-6"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity
+      ><a-entity
+        position="-14.942 2.203 -29.562"
+        id="BOX-7"
+        material="src:#box1"
+        geometry="depth:3;height:3;width:3"
+      ></a-entity>
+      <a-entity
+        position="7.696 4.805 -2.744"
+        rotation="0 180.000 0"
+        text="width:5;value:Colete 3 caixas do setor 1;color:#080808;height:1;side:double"
+        id="task"
+      ></a-entity>
+      <a-entity
+        position="7.79 3.923 -2.744"
+        rotation="0 180 0"
+        text="width:8;value:Colete 2 caixas do setor 2;color:#080808;height:1;side:double"
+        id="task2"
+      ></a-entity>
+      <a-entity
+        position="7.788 3.065 -2.744"
+        rotation="0 180 0"
+        text="width:8;value:Colete 1 caixas do setor 3;color:#080808;height:1;side:double"
+        id="task3"
+      ></a-entity>
+      <a-entity
+        position="-6.207 4.609 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task4"
+      ></a-entity>
+      <a-entity
+        position="-6.207 3.842 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task5"
+      ></a-entity>
+      <a-entity
+        position="-6.259 3.042 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task6"
+      ></a-entity>
+      <a-entity
+        position="-16.02 3.042 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task7"
+      ></a-entity>
+      <a-entity
+        position="-16.02 3.98 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task8"
+      ></a-entity>
+      <a-entity
+        position="-16.02 4.8 -2.744"
+        rotation="0 180 0"
+        text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8"
+        id="task9"
+      ></a-entity>
+
+      <a-entity
+        position="-11.49 5.24 -33.518"
+        id="setor1"
+        geometry="height:15;primitive:cylinder"
+      ></a-entity>
+      <a-entity
+        position="-11.637 14.015 -33.518"
+        id="setor1-2"
+        material="src:#1"
+        geometry="height:2;radius:3;primitive:cylinder"
+        rotation="0 90 90"
+      >
         <a-animation
           attribute="rotation"
           to="0 360 0"
           repeat="indefinite"
           dur="10000"
           easing="linear"
-        ></a-animation>
-      </a-entity>
-   <a-entity
-      position="15.579 9.032 -1.479"
-      geometry="width:1.7;height:1.7;segmentsHeight:18"
-      material="src:#logo"
-      id="Logo"
-    ></a-entity
-    ><a-entity
-      position="2.769 9.032 -1.479"
-      geometry="height:1.7;width:1.7;segmentsHeight:18"
-      material="src:#logo"
-      id="Logo-2"
-    ></a-entity
-    ><a-entity
-      position="-9.954 9.032 -1.479"
-      geometry="height:1.7;width:1.7;segmentsHeight:18"
-      material="src:#logo"
-      id="Logo-3"
-    ></a-entity
-  ><a-entity
-  position="-4.524 3.957 -2.626"
-  material=""
-  geometry="width:5;height:3;depth:0.2"
-  id="board"
-></a-entity
-><a-entity
-  position="-4.524 1.036 -2.626"
-  material=""
-  geometry="width:0.5;height:3;depth:0.2"
-  id="board-4"
-></a-entity
-><a-entity
-  position="9.849 1.036 -2.626"
-  material=""
-  geometry="depth:0.2;height:3;width:0.5"
-  id="board-6"
-></a-entity
-><a-entity
-  position="-14.03 1.036 -2.626"
-  material=""
-  geometry="depth:0.2;height:3;width:0.5"
-  id="board-5"
-></a-entity
-><a-entity
-  position="9.722 3.984 -2.626"
-  material=""
-  geometry="depth:0.2;height:3;width:5"
-  id="board-2"
-></a-entity
-><a-entity
-  position="-14.005 3.984 -2.626"
-  material=""
-  geometry="depth:0.2;height:3;width:5"
-  id="board-3"
-></a-entity
-><a-entity
-position="-12.097 2.203 -30.583"
-id="BOX"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-9.853 2.203 -33.888"
-id="BOX-2"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.643 5.042 -50.745"
-id="BOX-12"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.643 2.6 -45.299"
-id="BOX-13"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-15.156 2.6 -45.299"
-id="BOX-14"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.49 5.24 -33.888"
-id="BOX-3"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-13.117 2.203 -33.888"
-id="BOX-4"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.495 5.015 -37.251"
-id="BOX-5"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.377 8.051 -36.001"
-id="BOX-8"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-16.121 2.178 -33.638"
-id="BOX-9"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-14.868 2.178 -36.866"
-id="BOX-10"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-14.798 5.276 -34.178"
-id="BOX-11"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="15.78 2.229 -56.442"
-id="BOX2"
-material="src:[object HTMLImageElement]"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="12.437 2.229 -55.863"
-id="BOX2-2"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="12.437 2.229 -51.04"
-id="BOX2-3"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="16.003 2.229 -51.04"
-id="BOX2-4"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="8.46 2.229 -53.615"
-id="BOX2-5"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-7.174 2.229 -53.615"
-id="BOX2-8"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-7.174 2.229 -57.679"
-id="BOX2-9"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.331 2.229 -57.679"
-id="BOX2-10"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="13.777 4.945 -53.615"
-id="BOX2-6"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="13.777 2.262 -47.576"
-id="BOX2-7"
-material="src:#box2"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="16.93 2.262 -33.675"
-id="BOX3"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="13.8 2.262 -33.675"
-id="BOX3-2"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="10.632 2.262 -33.675"
-id="BOX3-3"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="10.632 2.262 -37.115"
-id="BOX3-4"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="10.632 5.244 -34.468"
-id="BOX3-5"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="15.722 5.244 -34.468"
-id="BOX3-6"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="13.888 2.069 -30.741"
-id="BOX3-7"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-13.585 2.069 -50.169"
-id="BOX3-8"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-13.585 2.069 -53.876"
-id="BOX3-9"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-10.246 2.069 -53.876"
-id="BOX3-10"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-10.246 2.069 -50.25"
-id="BOX3-11"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-7.137 2.069 -50.25"
-id="BOX3-12"
-material="src:#box3"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-11.663 2.203 -36.737"
-id="BOX-6"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
-><a-entity
-position="-14.942 2.203 -29.562"
-id="BOX-7"
-material="src:#box1"
-geometry="depth:3;height:3;width:3"
-></a-entity
->
-<a-entity
-position="7.696 4.805 -2.744"
-rotation="0 180.000 0"
-text="width:5;value:Colete 3 caixas do setor 1;color:#080808;height:1;side:double"
-id="task"
-></a-entity>
-<a-entity
-  position="7.79 3.923 -2.744"
-  rotation="0 180 0"
-  text="width:8;value:Colete 2 caixas do setor 2;color:#080808;height:1;side:double"
-  id="task2"
-></a-entity>
-<a-entity position="7.788 3.065 -2.744" rotation="0 180 0" text="width:8;value:Colete 1 caixas do setor 3;color:#080808;height:1;side:double" id="task3"></a-entity>
-<a-entity position="-6.207 4.609 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task4"></a-entity>
-<a-entity position="-6.207 3.842 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task5"></a-entity>
-<a-entity position="-6.259 3.042 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task6"></a-entity>
-<a-entity position="-16.02 3.042 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task7"></a-entity>
-<a-entity position="-16.02 3.98 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task8"></a-entity>
-<a-entity position="-16.02 4.8 -2.744" rotation="0 180 0" text="color:#080808;height:1;side:double;value:Colete 1 caixas do setor 3;width:8" id="task9"></a-entity>
+        ></a-animation
+      ></a-entity>
     </a-scene>
   </body>
   <script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
