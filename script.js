@@ -32,6 +32,7 @@ const shootCollided = (event) => {
     // event.detail.target.el.removeEventListener("collide", shootCollided);
     if (rightAnswers.includes(event.detail.body.el.id)) {
       truckOut.play();
+      truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
       box.setAttribute("position", "3.201 4.763 -50.692");
       box.setAttribute("material", "src:#box2");
@@ -39,6 +40,15 @@ const shootCollided = (event) => {
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
       myScene.appendChild(box);
+      box.addEventListener("componentchanged", function (evt) {
+        if (evt.detail.name === "position") {
+          console.log(
+            "Entity has moved to",
+            evt.target.getAttribute("position"),
+            "!"
+          );
+        }
+      });
     }
 
     // myScene.removeChild(event.detail.target.el);
