@@ -21,9 +21,9 @@
         <img id="floor-gss" src="images/grass.jpg" />
         <img id="sky-asset" src="images/sky.jpeg" />
         <img id="logo" src="images/AMAZON.ico" />
-        <img id="logo" src="images/caixa1.jpg" />
-        <img id="logo" src="images/caixa2.jpg" />
-        <img id="logo" src="images/caixa3.jpg" />
+        <img id="box1" src="images/caixa1.jpg" />
+        <img id="box2" src="images/caixa2.jpg" />
+        <img id="box3" src="images/caixa3.jpg" />
         <!-- 1 -->
 
         <a-asset-item id="mng-o" src="assets/manager-obj/manager.obj"></a-asset-item>
@@ -57,6 +57,20 @@
       scale="0.150 0.150 0.150"
       id="truck"
     ></a-entity>
+    <a-entity
+        gltf-model="assets/truck.gltf"
+        position="13.34 0.417 23.931"
+        rotation="0 90 0"
+        scale="0.15 0.15 0.15"
+        id="truck-2"
+      ></a-entity
+      ><a-entity
+        gltf-model="assets/truck.gltf"
+        position="-12.1 0.417 23.931"
+        rotation="0 90 0"
+        scale="0.15 0.15 0.15"
+        id="truck-3"
+      ></a-entity>
     
     <a-entity
     gltf-model="#wrh-m"
@@ -89,7 +103,31 @@
           easing="linear"
         ></a-animation>
       </a-entity>
-
+      <a-entity
+      position="-0.868 1.206 -33.888"
+      id="BOX"
+      material="src:#box1"
+      geometry="depth:3;height:3;width:3"
+    ></a-entity
+    ><a-entity
+      position="15.579 9.032 -1.479"
+      geometry="width:1.7;height:1.7;segmentsHeight:18"
+      material="src:#logo"
+      id="Logo"
+    ></a-entity
+    ><a-entity
+      position="2.769 9.032 -1.479"
+      geometry="height:1.7;width:1.7;segmentsHeight:18"
+      material="src:#logo"
+      id="Logo-2"
+    ></a-entity
+    ><a-entity
+      position="-9.954 9.032 -1.479"
+      geometry="height:1.7;width:1.7;segmentsHeight:18"
+      material="src:#logo"
+      id="Logo-3"
+    ></a-entity
+  >
     </a-scene>
   </body>
   <script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
