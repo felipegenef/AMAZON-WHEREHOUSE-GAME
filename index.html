@@ -61,9 +61,9 @@
 
       <a-entity
         gltf-model="#car-m"
-        position="1.454 6.054 -54.867"
-        rotation="0 90.000 0"
-        scale="0.150 0.150 0.150"
+        position="0.035 1.582 -54.923"
+        rotation="0 0 0"
+        scale="1 1 1"
         id="car"
       ></a-entity>
       <a-entity
@@ -500,8 +500,9 @@
         material="color:#080808"
         geometry="height:15;primitive:cylinder"
       ></a-entity>
+      
       <a-entity
-        position="-11.637 14.015 -32"
+      position="-11.637 14.015 -33.393"
         id="setor1-2"
         material="src:#1"
         geometry="height:2;radius:3;primitive:cylinder"
@@ -515,29 +516,16 @@
           easing="linear"
         ></a-animation
       ></a-entity>
-      <a-entity
-      position="-11.637 14.015 -34"
-      id="setor1-3"
-      material="src:#1"
-      geometry="height:2;radius:3;primitive:cylinder"
-      rotation="180 90 90"
-    >
-      <a-animation
-        attribute="rotation"
-        to="180 360 90"
-        repeat="indefinite"
-        dur="10000"
-        easing="linear"
-      ></a-animation
-    ></a-entity>
+  
       <a-entity
         position="8.938 5.240 -56.930"
         id="setor2"
         geometry="height:15;primitive:cylinder"
         material="color:#080808"
       ></a-entity>
+     
       <a-entity
-        position="8.395 14.005 -56"
+      position="8.395 14.005 -56.485"
         id="setor2-2"
         material="src:#2"
         geometry="height:2;radius:3;primitive:cylinder"
@@ -551,21 +539,9 @@
           easing="linear"
         ></a-animation
       ></a-entity>
-      <a-entity
-        position="8.395 14.005 -57"
-        id="setor2-3"
-        material="src:#2"
-        geometry="height:2;radius:3;primitive:cylinder"
-        rotation="180 90 90"
-      >
-        <a-animation
-          attribute="rotation"
-          to="180 360 90"
-          repeat="indefinite"
-          dur="10000"
-          easing="linear"
-        ></a-animation
-      ></a-entity>
+      <a-entity position="14.623 5.24 -37.743" id="setor3" geometry="primitive:cylinder;height:15" material="color:#080808"></a-entity>
+      <a-entity position="14.593 14.005 -38.007" id="setor3-2" material="src:#3" geometry="height:2.5;radius:3;primitive:cylinder" rotation="0 133.178400000005 90">
+        <a-animation attribute="rotation" to="0 360 90" repeat="indefinite" dur="10000" easing="linear"></a-animation></a-entity>
     </a-scene>
     <a-entity
     position="15.297 5.240 -36.839"
