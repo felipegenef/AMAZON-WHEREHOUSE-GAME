@@ -415,10 +415,11 @@
       <a-entity
         position="-11.49 5.24 -33.518"
         id="setor1"
+        material="color:#080808"
         geometry="height:15;primitive:cylinder"
       ></a-entity>
       <a-entity
-        position="-11.637 14.015 -33.518"
+        position="-11.637 14.015 -32"
         id="setor1-2"
         material="src:#1"
         geometry="height:2;radius:3;primitive:cylinder"
@@ -433,12 +434,28 @@
         ></a-animation
       ></a-entity>
       <a-entity
+      position="-11.637 14.015 -34"
+      id="setor1-3"
+      material="src:#1"
+      geometry="height:2;radius:3;primitive:cylinder"
+      rotation="180 90 90"
+    >
+      <a-animation
+        attribute="rotation"
+        to="180 360 90"
+        repeat="indefinite"
+        dur="10000"
+        easing="linear"
+      ></a-animation
+    ></a-entity>
+      <a-entity
         position="8.938 5.240 -56.930"
         id="setor2"
         geometry="height:15;primitive:cylinder"
+        material="color:#080808"
       ></a-entity>
       <a-entity
-        position="8.395 14.005 -56.665"
+        position="8.395 14.005 -56"
         id="setor2-2"
         material="src:#2"
         geometry="height:2;radius:3;primitive:cylinder"
@@ -452,14 +469,30 @@
           easing="linear"
         ></a-animation
       ></a-entity>
+      <a-entity
+        position="8.395 14.005 -57"
+        id="setor2-3"
+        material="src:#2"
+        geometry="height:2;radius:3;primitive:cylinder"
+        rotation="180 90 90"
+      >
+        <a-animation
+          attribute="rotation"
+          to="180 360 90"
+          repeat="indefinite"
+          dur="10000"
+          easing="linear"
+        ></a-animation
+      ></a-entity>
     </a-scene>
     <a-entity
     position="15.297 5.240 -36.839"
     id="setor3"
+    material="color:#080808"
     geometry="height:15;primitive:cylinder"
   ></a-entity>
   <a-entity
-    position="15.149 11.826 -36.843"
+    position="15.149 11.826 -36"
     id="setor3-2"
     material="src:#3"
     geometry="height:2;radius:3;primitive:cylinder"
@@ -468,6 +501,21 @@
     <a-animation
       attribute="rotation"
       to="0 360 90"
+      repeat="indefinite"
+      dur="10000"
+      easing="linear"
+    ></a-animation
+  ></a-entity>
+  <a-entity
+    position="15.149 11.826 -37"
+    id="setor3-2"
+    material="src:#3"
+    geometry="height:2;radius:3;primitive:cylinder"
+    rotation="180 90 90"
+  >
+    <a-animation
+      attribute="rotation"
+      to="180 360 90"
       repeat="indefinite"
       dur="10000"
       easing="linear"
