@@ -1,14 +1,9 @@
 const truck = new Audio("assets/truck.wav");
 const truckOut = new Audio("assets/truckaudio.mp3");
 const error = new Audio("assets/error.wav");
-const rightAnswers = [
-  "3-blue",
-  "2-blue",
-  "2-orange",
-  "3-orange",
-  "3-black",
-  "1-black",
-];
+const secondCar = ["2-orange", "3-orange"];
+const thirdCar = ["3-black", "1-black"];
+const firstCar = ["3-blue", "2-blue"];
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -30,12 +25,52 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
-    if (rightAnswers.includes(event.detail.body.el.id)) {
+    if (firstCar.includes(event.detail.body.el.id)) {
       truckOut.play();
       truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
       box.setAttribute("position", "3.201 4.763 -50.692");
-      box.setAttribute("material", "src:#box2");
+      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
+      box.setAttribute("geometry", "depth:3;height:3;width:3");
+      box.setAttribute("static-body", "sphereRadius:NaN");
+      box.setAttribute("velocity", "0 0 4");
+      myScene.appendChild(box);
+      box.addEventListener("componentchanged", function (evt) {
+        if (evt.detail.name === "position") {
+          console.log(
+            "Entity has moved to",
+            evt.target.getAttribute("position"),
+            "!"
+          );
+        }
+      });
+    }
+    if (secondCar.includes(event.detail.body.el.id)) {
+      truckOut.play();
+      truckOut.onended(() => truckOut.play());
+      const box = document.createElement("a-entity");
+      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
+      box.setAttribute("geometry", "depth:3;height:3;width:3");
+      box.setAttribute("static-body", "sphereRadius:NaN");
+      box.setAttribute("velocity", "0 0 4");
+      myScene.appendChild(box);
+      box.addEventListener("componentchanged", function (evt) {
+        if (evt.detail.name === "position") {
+          console.log(
+            "Entity has moved to",
+            evt.target.getAttribute("position"),
+            "!"
+          );
+        }
+      });
+    }
+    if (thirdCar.includes(event.detail.body.el.id)) {
+      truckOut.play();
+      truckOut.onended(() => truckOut.play());
+      const box = document.createElement("a-entity");
+      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
