@@ -25,9 +25,9 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
+    console.log(event.detail.body.el.id[0]);
     if (thirdCar.includes(event.detail.body.el.id)) {
       truckOut.play();
-      truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
       const car = document.createElement("a-entity");
       car.setAttribute("position", "3.427 1.582 -54.923");
@@ -53,7 +53,6 @@ const shootCollided = (event) => {
     }
     if (secondCar.includes(event.detail.body.el.id)) {
       truckOut.play();
-      truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
       const car = document.createElement("a-entity");
       car.setAttribute("position", "0.232 1.582 -54.923");
@@ -79,7 +78,6 @@ const shootCollided = (event) => {
     }
     if (firstCar.includes(event.detail.body.el.id)) {
       truckOut.play();
-      truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
       const car = document.createElement("a-entity");
       car.setAttribute("position", "-2.614 1.582 -54.923");
