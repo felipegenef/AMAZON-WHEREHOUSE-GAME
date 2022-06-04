@@ -25,7 +25,6 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
-    console.log(event.detail.body.el.id[0]);
     if (thirdCar.includes(event.detail.body.el.id)) {
       truckOut.play();
       const box = document.createElement("a-entity");
@@ -42,12 +41,14 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        if (evt.detail.name === "position") {
-          console.log(
-            "Entity has moved to",
-            evt.target.getAttribute("position"),
-            "!"
-          );
+        if (
+          evt.detail.name === "position" &&
+          evt.target.getAttribute("position").z == 3.838
+        ) {
+          myScene.removeChild(box);
+          myScene.removeChild(car);
+          box.removeEventListener("componentchanged");
+          truck.play();
         }
       });
     }
@@ -67,12 +68,14 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        if (evt.detail.name === "position") {
-          console.log(
-            "Entity has moved to",
-            evt.target.getAttribute("position"),
-            "!"
-          );
+        if (
+          evt.detail.name === "position" &&
+          evt.target.getAttribute("position").z == 3.838
+        ) {
+          myScene.removeChild(box);
+          myScene.removeChild(car);
+          box.removeEventListener("componentchanged");
+          truck.play();
         }
       });
     }
@@ -92,12 +95,14 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        if (evt.detail.name === "position") {
-          console.log(
-            "Entity has moved to",
-            evt.target.getAttribute("position"),
-            "!"
-          );
+        if (
+          evt.detail.name === "position" &&
+          evt.target.getAttribute("position").z == 3.838
+        ) {
+          myScene.removeChild(box);
+          myScene.removeChild(car);
+          box.removeEventListener("componentchanged");
+          truck.play();
         }
       });
     }
