@@ -1,11 +1,18 @@
 <img src="/images/among-us.jpg"/>
 
-# AmongUs 3D Game
-Simple 3D Among Us game for VR made with Clara.io 3D objects and Iframe. The objective is to kill everyone before 120 seconds.
-Feel free to fork and share!
+# Amazon WhereHouse delivery simultor
+
+Help Amazon with their wherehouse logistic.
+
 ## Objective
-- kill all crew before 120s!
+
+- Send the right sector boxes for the right truck.
+
 ## Controls
-- #### Space: kill
+
+- #### Space: press button
 - #### Arrows: walk
-# MArket3D
+
+### How to play?
+
+#### 1) Go to the WhereHouse box sectors

@@ -1,9 +1,9 @@
 const truck = new Audio("assets/truckout.mp3");
 const truckOut = new Audio("assets/truckaudio.mp3");
 const error = new Audio("assets/error.wav");
-const secondCar = ["2-orange", "3-orange"];
-const firstCar = ["3-black", "1-black"];
-const thirdCar = ["3-blue", "2-blue"];
+const orangeCarList = ["2-orange", "3-orange"];
+const blackCarList = ["3-black", "1-black"];
+const blueCarList = ["3-blue", "2-blue"];
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -25,13 +25,13 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     if (
-      !thirdCar.includes(event.detail.body.el.id) &&
-      secondCar.includes(event.detail.body.el.id) &&
-      firstCar.includes(event.detail.body.el.id)
+      !blueCarList.includes(event.detail.body.el.id) &&
+      !orangeCarList.includes(event.detail.body.el.id) &&
+      !blackCarList.includes(event.detail.body.el.id)
     ) {
       error.play();
     } else {
-      if (thirdCar.includes(event.detail.body.el.id)) {
+      if (blueCarList.includes(event.detail.body.el.id)) {
         truckOut.play();
         const box = document.createElement("a-entity");
         const car = document.createElement("a-entity");
@@ -46,7 +46,7 @@ const shootCollided = (event) => {
         box.setAttribute("velocity", "0 0 6");
         myScene.appendChild(box);
         myScene.appendChild(car);
-        box.addEventListener("componentchanged", function (evt) {
+        const positionChanged = (evt) => {
           console.log(evt.target.getAttribute("position"));
           if (
             evt.detail.name === "position" &&
@@ -54,16 +54,21 @@ const shootCollided = (event) => {
           ) {
             myScene.removeChild(box);
             myScene.removeChild(car);
-            box.removeEventListener("componentchanged");
+            box.removeEventListener("componentchanged", positionChanged);
             truck.play();
-            const blackTruck = document.getElementById("truck-3");
-            const logoblack = document.getElementById("Logo-3");
-            blackTruck.setAttribute("visible", false);
-            logoblack.setAttribute("visible", false);
+            const blueTruck = document.getElementById("truck-2");
+            const logoblue = document.getElementById("Logo");
+            blueTruck.setAttribute("visible", false);
+            logoblue.setAttribute("visible", false);
+            setTimeout(() => {
+              blueTruck.setAttribute("visible", true);
+              logoblue.setAttribute("visible", true);
+            }, 15000);
           }
-        });
+        };
+        box.addEventListener("componentchanged", positionChanged);
       }
-      if (secondCar.includes(event.detail.body.el.id)) {
+      if (orangeCarList.includes(event.detail.body.el.id)) {
         truckOut.play();
         const box = document.createElement("a-entity");
         const car = document.createElement("a-entity");
@@ -78,7 +83,7 @@ const shootCollided = (event) => {
         box.setAttribute("velocity", "0 0 6");
         myScene.appendChild(box);
         myScene.appendChild(car);
-        box.addEventListener("componentchanged", function (evt) {
+        const positionChanged = (evt) => {
           console.log(evt.target.getAttribute("position"));
           if (
             evt.detail.name === "position" &&
@@ -86,16 +91,21 @@ const shootCollided = (event) => {
           ) {
             myScene.removeChild(box);
             myScene.removeChild(car);
-            box.removeEventListener("componentchanged");
+            box.removeEventListener("componentchanged", positionChanged);
             truck.play();
             const orangeTruck = document.getElementById("truck");
             const logoOrange = document.getElementById("Logo-2");
             orangeTruck.setAttribute("visible", false);
             logoOrange.setAttribute("visible", false);
+            setTimeout(() => {
+              orangeTruck.setAttribute("visible", true);
+              logoOrange.setAttribute("visible", true);
+            }, 15000);
           }
-        });
+        };
+        box.addEventListener("componentchanged", positionChanged);
       }
-      if (firstCar.includes(event.detail.body.el.id)) {
+      if (blackCarList.includes(event.detail.body.el.id)) {
         truckOut.play();
         const box = document.createElement("a-entity");
         const car = document.createElement("a-entity");
@@ -110,7 +120,7 @@ const shootCollided = (event) => {
         box.setAttribute("velocity", "0 0 6");
         myScene.appendChild(box);
         myScene.appendChild(car);
-        box.addEventListener("componentchanged", function (evt) {
+        const positionChanged = (evt) => {
           console.log(evt.target.getAttribute("position"));
           if (
             evt.detail.name === "position" &&
@@ -118,14 +128,19 @@ const shootCollided = (event) => {
           ) {
             myScene.removeChild(box);
             myScene.removeChild(car);
-            box.removeEventListener("componentchanged");
+            box.removeEventListener("componentchanged", positionChanged);
             truck.play();
-            const blueTruck = document.getElementById("truck-2");
-            const logoblue = document.getElementById("Logo");
+            const blueTruck = document.getElementById("truck-3");
+            const logoblue = document.getElementById("Logo-3");
             blueTruck.setAttribute("visible", false);
             logoblue.setAttribute("visible", false);
+            setTimeout(() => {
+              blueTruck.setAttribute("visible", true);
+              logoblue.setAttribute("visible", true);
+            }, 15000);
           }
-        });
+        };
+        box.addEventListener("componentchanged", positionChanged);
       }
     }
 
