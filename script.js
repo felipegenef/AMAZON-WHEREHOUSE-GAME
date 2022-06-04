@@ -33,7 +33,7 @@ const shootCollided = (event) => {
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
       car.setAttribute("gltf-model", "carrinho.gltf");
-      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("position", "3.427 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
@@ -56,11 +56,11 @@ const shootCollided = (event) => {
       truckOut.play();
       const box = document.createElement("a-entity");
       const car = document.createElement("a-entity");
-      car.setAttribute("position", "0.232 1.582 -54.923");
+      car.setAttribute("position", "0.066 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
       car.setAttribute("gltf-model", "carrinho.gltf");
-      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("position", "0.066 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
@@ -83,11 +83,11 @@ const shootCollided = (event) => {
       truckOut.play();
       const box = document.createElement("a-entity");
       const car = document.createElement("a-entity");
-      car.setAttribute("position", "-2.614 1.582 -54.923");
+      car.setAttribute("position", "-2.632 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
       car.setAttribute("gltf-model", "carrinho.gltf");
-      box.setAttribute("position", "3.201 4.763 -50.692");
+      box.setAttribute("position", "-2.632 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
