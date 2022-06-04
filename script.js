@@ -1,4 +1,4 @@
-const truck = new Audio("assets/truck.wav");
+const truck = new Audio("assets/truckout.mp3");
 const truckOut = new Audio("assets/truckaudio.mp3");
 const error = new Audio("assets/error.wav");
 const secondCar = ["2-orange", "3-orange"];
@@ -44,7 +44,7 @@ const shootCollided = (event) => {
         console.log(evt.target.getAttribute("position").z);
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == -3.484
+          evt.target.getAttribute("position").z >= -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
@@ -72,7 +72,7 @@ const shootCollided = (event) => {
         console.log(evt.target.getAttribute("position").z);
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == -3.484
+          evt.target.getAttribute("position").z >= -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
@@ -100,7 +100,7 @@ const shootCollided = (event) => {
         console.log(evt.target.getAttribute("position").z);
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == -3.484
+          evt.target.getAttribute("position").z >= -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
