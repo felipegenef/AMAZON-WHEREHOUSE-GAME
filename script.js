@@ -43,7 +43,7 @@ const shootCollided = (event) => {
       box.addEventListener("componentchanged", function (evt) {
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == 3.838
+          evt.target.getAttribute("position").z == -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
@@ -70,7 +70,7 @@ const shootCollided = (event) => {
       box.addEventListener("componentchanged", function (evt) {
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == 3.838
+          evt.target.getAttribute("position").z == -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
@@ -97,7 +97,7 @@ const shootCollided = (event) => {
       box.addEventListener("componentchanged", function (evt) {
         if (
           evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z == 3.838
+          evt.target.getAttribute("position").z == -3.484
         ) {
           myScene.removeChild(box);
           myScene.removeChild(car);
