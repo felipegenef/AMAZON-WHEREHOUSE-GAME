@@ -24,102 +24,109 @@ const shootCollided = (event) => {
     myScene.removeChild(event.detail.target.el);
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
-    // event.detail.target.el.removeEventListener("collide", shootCollided);
-    if (thirdCar.includes(event.detail.body.el.id)) {
-      truckOut.play();
-      const box = document.createElement("a-entity");
-      const car = document.createElement("a-entity");
-      car.setAttribute("position", "3.427 1.582 -54.923");
-      car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 6");
-      car.setAttribute("gltf-model", "assets/carrinho.gltf");
-      box.setAttribute("position", "3.427 4.763 -50.692");
-      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
-      box.setAttribute("geometry", "depth:3;height:3;width:3");
-      box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 6");
-      myScene.appendChild(box);
-      myScene.appendChild(car);
-      box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position"));
-        if (
-          evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z >= -3.484
-        ) {
-          myScene.removeChild(box);
-          myScene.removeChild(car);
-          box.removeEventListener("componentchanged");
-          truck.play();
-          const blackTruck = document.getElementById("truck-3");
-          const logoblack = document.getElementById("Logo-3");
-          blackTruck.setAttribute("visible", false);
-          logoblack.setAttribute("visible", false);
-        }
-      });
-    }
-    if (secondCar.includes(event.detail.body.el.id)) {
-      truckOut.play();
-      const box = document.createElement("a-entity");
-      const car = document.createElement("a-entity");
-      car.setAttribute("position", "0.066 1.582 -54.923");
-      car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 6");
-      car.setAttribute("gltf-model", "assets/carrinho.gltf");
-      box.setAttribute("position", "0.066 4.763 -50.692");
-      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
-      box.setAttribute("geometry", "depth:3;height:3;width:3");
-      box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 6");
-      myScene.appendChild(box);
-      myScene.appendChild(car);
-      box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position"));
-        if (
-          evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z >= -3.484
-        ) {
-          myScene.removeChild(box);
-          myScene.removeChild(car);
-          box.removeEventListener("componentchanged");
-          truck.play();
-          const orangeTruck = document.getElementById("truck");
-          const logoOrange = document.getElementById("Logo-2");
-          orangeTruck.setAttribute("visible", false);
-          logoOrange.setAttribute("visible", false);
-        }
-      });
-    }
-    if (firstCar.includes(event.detail.body.el.id)) {
-      truckOut.play();
-      const box = document.createElement("a-entity");
-      const car = document.createElement("a-entity");
-      car.setAttribute("position", "-2.632 1.582 -54.923");
-      car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 6");
-      car.setAttribute("gltf-model", "assets/carrinho.gltf");
-      box.setAttribute("position", "-2.632 4.763 -50.692");
-      box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
-      box.setAttribute("geometry", "depth:3;height:3;width:3");
-      box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 6");
-      myScene.appendChild(box);
-      myScene.appendChild(car);
-      box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position"));
-        if (
-          evt.detail.name === "position" &&
-          evt.target.getAttribute("position").z >= -3.484
-        ) {
-          myScene.removeChild(box);
-          myScene.removeChild(car);
-          box.removeEventListener("componentchanged");
-          truck.play();
-          const blueTruck = document.getElementById("truck-2");
-          const logoblue = document.getElementById("Logo");
-          blueTruck.setAttribute("visible", false);
-          logoblue.setAttribute("visible", false);
-        }
-      });
+    if (
+      !thirdCar.includes(event.detail.body.el.id) &&
+      secondCar.includes(event.detail.body.el.id) &&
+      firstCar.includes(event.detail.body.el.id)
+    ) {
+      error.play();
+    } else {
+      if (thirdCar.includes(event.detail.body.el.id)) {
+        truckOut.play();
+        const box = document.createElement("a-entity");
+        const car = document.createElement("a-entity");
+        car.setAttribute("position", "3.427 1.582 -54.923");
+        car.setAttribute("static-body", "sphereRadius:NaN");
+        car.setAttribute("velocity", "0 0 6");
+        car.setAttribute("gltf-model", "assets/carrinho.gltf");
+        box.setAttribute("position", "3.427 4.763 -50.692");
+        box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
+        box.setAttribute("geometry", "depth:3;height:3;width:3");
+        box.setAttribute("static-body", "sphereRadius:NaN");
+        box.setAttribute("velocity", "0 0 6");
+        myScene.appendChild(box);
+        myScene.appendChild(car);
+        box.addEventListener("componentchanged", function (evt) {
+          console.log(evt.target.getAttribute("position"));
+          if (
+            evt.detail.name === "position" &&
+            evt.target.getAttribute("position").z >= -3.484
+          ) {
+            myScene.removeChild(box);
+            myScene.removeChild(car);
+            box.removeEventListener("componentchanged");
+            truck.play();
+            const blackTruck = document.getElementById("truck-3");
+            const logoblack = document.getElementById("Logo-3");
+            blackTruck.setAttribute("visible", false);
+            logoblack.setAttribute("visible", false);
+          }
+        });
+      }
+      if (secondCar.includes(event.detail.body.el.id)) {
+        truckOut.play();
+        const box = document.createElement("a-entity");
+        const car = document.createElement("a-entity");
+        car.setAttribute("position", "0.066 1.582 -54.923");
+        car.setAttribute("static-body", "sphereRadius:NaN");
+        car.setAttribute("velocity", "0 0 6");
+        car.setAttribute("gltf-model", "assets/carrinho.gltf");
+        box.setAttribute("position", "0.066 4.763 -50.692");
+        box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
+        box.setAttribute("geometry", "depth:3;height:3;width:3");
+        box.setAttribute("static-body", "sphereRadius:NaN");
+        box.setAttribute("velocity", "0 0 6");
+        myScene.appendChild(box);
+        myScene.appendChild(car);
+        box.addEventListener("componentchanged", function (evt) {
+          console.log(evt.target.getAttribute("position"));
+          if (
+            evt.detail.name === "position" &&
+            evt.target.getAttribute("position").z >= -3.484
+          ) {
+            myScene.removeChild(box);
+            myScene.removeChild(car);
+            box.removeEventListener("componentchanged");
+            truck.play();
+            const orangeTruck = document.getElementById("truck");
+            const logoOrange = document.getElementById("Logo-2");
+            orangeTruck.setAttribute("visible", false);
+            logoOrange.setAttribute("visible", false);
+          }
+        });
+      }
+      if (firstCar.includes(event.detail.body.el.id)) {
+        truckOut.play();
+        const box = document.createElement("a-entity");
+        const car = document.createElement("a-entity");
+        car.setAttribute("position", "-2.632 1.582 -54.923");
+        car.setAttribute("static-body", "sphereRadius:NaN");
+        car.setAttribute("velocity", "0 0 6");
+        car.setAttribute("gltf-model", "assets/carrinho.gltf");
+        box.setAttribute("position", "-2.632 4.763 -50.692");
+        box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
+        box.setAttribute("geometry", "depth:3;height:3;width:3");
+        box.setAttribute("static-body", "sphereRadius:NaN");
+        box.setAttribute("velocity", "0 0 6");
+        myScene.appendChild(box);
+        myScene.appendChild(car);
+        box.addEventListener("componentchanged", function (evt) {
+          console.log(evt.target.getAttribute("position"));
+          if (
+            evt.detail.name === "position" &&
+            evt.target.getAttribute("position").z >= -3.484
+          ) {
+            myScene.removeChild(box);
+            myScene.removeChild(car);
+            box.removeEventListener("componentchanged");
+            truck.play();
+            const blueTruck = document.getElementById("truck-2");
+            const logoblue = document.getElementById("Logo");
+            blueTruck.setAttribute("visible", false);
+            logoblue.setAttribute("visible", false);
+          }
+        });
+      }
     }
 
     // myScene.removeChild(event.detail.target.el);
