@@ -2,8 +2,8 @@ const truck = new Audio("assets/truck.wav");
 const truckOut = new Audio("assets/truckaudio.mp3");
 const error = new Audio("assets/error.wav");
 const secondCar = ["2-orange", "3-orange"];
-const thirdCar = ["3-black", "1-black"];
-const firstCar = ["3-blue", "2-blue"];
+const firstCar = ["3-black", "1-black"];
+const thirdCar = ["3-blue", "2-blue"];
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -25,16 +25,22 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     // event.detail.target.el.removeEventListener("collide", shootCollided);
-    if (firstCar.includes(event.detail.body.el.id)) {
+    if (thirdCar.includes(event.detail.body.el.id)) {
       truckOut.play();
       truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
+      const car = document.createElement("a-entity");
+      car.setAttribute("position", "3.427 1.582 -54.923");
+      car.setAttribute("static-body", "sphereRadius:NaN");
+      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("gltf-model", "carrinho.gltf");
       box.setAttribute("position", "3.201 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
       myScene.appendChild(box);
+      myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
         if (evt.detail.name === "position") {
           console.log(
@@ -49,12 +55,18 @@ const shootCollided = (event) => {
       truckOut.play();
       truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
+      const car = document.createElement("a-entity");
+      car.setAttribute("position", "0.232 1.582 -54.923");
+      car.setAttribute("static-body", "sphereRadius:NaN");
+      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("gltf-model", "carrinho.gltf");
       box.setAttribute("position", "3.201 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
       myScene.appendChild(box);
+      myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
         if (evt.detail.name === "position") {
           console.log(
@@ -65,16 +77,22 @@ const shootCollided = (event) => {
         }
       });
     }
-    if (thirdCar.includes(event.detail.body.el.id)) {
+    if (firstCar.includes(event.detail.body.el.id)) {
       truckOut.play();
       truckOut.onended(() => truckOut.play());
       const box = document.createElement("a-entity");
+      const car = document.createElement("a-entity");
+      car.setAttribute("position", "-2.614 1.582 -54.923");
+      car.setAttribute("static-body", "sphereRadius:NaN");
+      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("gltf-model", "carrinho.gltf");
       box.setAttribute("position", "3.201 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
       box.setAttribute("velocity", "0 0 4");
       myScene.appendChild(box);
+      myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
         if (evt.detail.name === "position") {
           console.log(
