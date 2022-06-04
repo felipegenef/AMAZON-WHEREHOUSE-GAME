@@ -41,7 +41,7 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position").z);
+        console.log(evt.target.getAttribute("position"));
         if (
           evt.detail.name === "position" &&
           evt.target.getAttribute("position").z >= -3.484
@@ -50,6 +50,10 @@ const shootCollided = (event) => {
           myScene.removeChild(car);
           box.removeEventListener("componentchanged");
           truck.play();
+          const blackTruck = document.getElementById("truck-3");
+          const logoblack = document.getElementById("Logo-3");
+          blackTruck.setAttribute("visible", false);
+          logoblack.setAttribute("visible", false);
         }
       });
     }
@@ -69,7 +73,7 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position").z);
+        console.log(evt.target.getAttribute("position"));
         if (
           evt.detail.name === "position" &&
           evt.target.getAttribute("position").z >= -3.484
@@ -78,6 +82,10 @@ const shootCollided = (event) => {
           myScene.removeChild(car);
           box.removeEventListener("componentchanged");
           truck.play();
+          const orangeTruck = document.getElementById("truck");
+          const logoOrange = document.getElementById("Logo-2");
+          orangeTruck.setAttribute("visible", false);
+          logoOrange.setAttribute("visible", false);
         }
       });
     }
@@ -97,7 +105,7 @@ const shootCollided = (event) => {
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
-        console.log(evt.target.getAttribute("position").z);
+        console.log(evt.target.getAttribute("position"));
         if (
           evt.detail.name === "position" &&
           evt.target.getAttribute("position").z >= -3.484
@@ -106,6 +114,10 @@ const shootCollided = (event) => {
           myScene.removeChild(car);
           box.removeEventListener("componentchanged");
           truck.play();
+          const blueTruck = document.getElementById("truck-2");
+          const logoblue = document.getElementById("Logo");
+          blueTruck.setAttribute("visible", false);
+          logoblue.setAttribute("visible", false);
         }
       });
     }
