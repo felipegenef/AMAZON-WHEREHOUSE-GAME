@@ -31,13 +31,13 @@ const shootCollided = (event) => {
       const car = document.createElement("a-entity");
       car.setAttribute("position", "3.427 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("velocity", "0 0 6");
       car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "3.427 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 4");
+      box.setAttribute("velocity", "0 0 6");
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
@@ -58,13 +58,13 @@ const shootCollided = (event) => {
       const car = document.createElement("a-entity");
       car.setAttribute("position", "0.066 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("velocity", "0 0 6");
       car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "0.066 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 4");
+      box.setAttribute("velocity", "0 0 6");
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
@@ -85,13 +85,13 @@ const shootCollided = (event) => {
       const car = document.createElement("a-entity");
       car.setAttribute("position", "-2.632 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
-      car.setAttribute("velocity", "0 0 4");
+      car.setAttribute("velocity", "0 0 6");
       car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "-2.632 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
       box.setAttribute("static-body", "sphereRadius:NaN");
-      box.setAttribute("velocity", "0 0 4");
+      box.setAttribute("velocity", "0 0 6");
       myScene.appendChild(box);
       myScene.appendChild(car);
       box.addEventListener("componentchanged", function (evt) {
