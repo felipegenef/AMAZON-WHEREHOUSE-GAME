@@ -32,7 +32,7 @@ const shootCollided = (event) => {
       car.setAttribute("position", "3.427 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
-      car.setAttribute("gltf-model", "carrinho.gltf");
+      car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "3.427 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
@@ -59,7 +59,7 @@ const shootCollided = (event) => {
       car.setAttribute("position", "0.066 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
-      car.setAttribute("gltf-model", "carrinho.gltf");
+      car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "0.066 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
@@ -86,7 +86,7 @@ const shootCollided = (event) => {
       car.setAttribute("position", "-2.632 1.582 -54.923");
       car.setAttribute("static-body", "sphereRadius:NaN");
       car.setAttribute("velocity", "0 0 4");
-      car.setAttribute("gltf-model", "carrinho.gltf");
+      car.setAttribute("gltf-model", "assets/carrinho.gltf");
       box.setAttribute("position", "-2.632 4.763 -50.692");
       box.setAttribute("material", "src:#box" + event.detail.body.el.id[0]);
       box.setAttribute("geometry", "depth:3;height:3;width:3");
